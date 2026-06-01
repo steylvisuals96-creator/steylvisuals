@@ -5,6 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SteylVisuals — Vastgoedvideo's die opvallen én converteren</title>
   <meta name="description" content="Professionele short-form videocontent voor makelaars in Vlaanderen. Instagram Reels, TikTok, LinkedIn en drone shots. Vraag je gratis demo-edit aan." />
+  <meta property="og:title" content="SteylVisuals — Vastgoedvideo's die opvallen én converteren" />
+  <meta property="og:description" content="Short-form videocontent voor makelaars in Vlaanderen. Meer viewings, meer verkopen." />
+  <meta property="og:image" content="logo/sV%20(4)%20(1).png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="icon" type="image/png" href="logo/sV%20(4)%20(1).png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,200;9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
@@ -781,6 +787,256 @@
     }
     .faq-contact-btn:hover { background-color: var(--brown); }
 
+    /* ─── OVER MIJ ─── */
+    #over-mij {
+      background-color: var(--beige);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 0;
+    }
+    @media (max-width: 900px) {
+      #over-mij { grid-template-columns: 1fr; }
+    }
+
+    .over-mij-image-wrap {
+      position: relative;
+      overflow: hidden;
+      aspect-ratio: 3/4;
+    }
+    .over-mij-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+      filter: sepia(0.08) contrast(1.05);
+      transition: transform 0.8s cubic-bezier(0.16,1,0.3,1);
+    }
+    .over-mij-image-wrap:hover .over-mij-image { transform: scale(1.03); }
+
+    .over-mij-text {
+      padding: clamp(3rem, 8vw, 6rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .over-mij-body {
+      font-size: 0.95rem;
+      font-weight: 300;
+      line-height: 1.9;
+      color: var(--muted);
+      margin: 1.5rem 0 2rem;
+      max-width: 440px;
+    }
+
+    .over-mij-sig {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      font-weight: 400;
+      font-style: italic;
+      color: var(--brown);
+    }
+
+    /* ─── TESTIMONIALS ─── */
+    #testimonials {
+      background-color: var(--off-white);
+    }
+
+    .testimonials-header {
+      text-align: center;
+      margin-bottom: clamp(3rem, 6vh, 5rem);
+    }
+    .testimonials-header .eyebrow { justify-content: center; }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    @media (max-width: 900px) {
+      .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    }
+
+    .testimonial-card {
+      background-color: var(--beige);
+      border-radius: 20px;
+      padding: clamp(1.75rem, 3vw, 2.25rem);
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      border: 1px solid var(--beige-mid);
+      transition: transform 0.3s cubic-bezier(0.16,1,0.3,1), box-shadow 0.3s ease;
+    }
+    .testimonial-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(28,14,7,0.08);
+    }
+
+    .testimonial-stars {
+      display: flex;
+      gap: 3px;
+    }
+    .testimonial-stars svg {
+      width: 14px;
+      height: 14px;
+      fill: var(--gold);
+    }
+
+    .testimonial-quote {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--dark);
+      font-style: italic;
+      flex: 1;
+    }
+
+    .testimonial-author {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--beige-mid);
+    }
+    .author-name {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--dark);
+    }
+    .author-role {
+      font-size: 0.75rem;
+      font-weight: 300;
+      color: var(--muted);
+    }
+
+    /* ─── CONTACT FORM ─── */
+    #contact-form {
+      background-color: var(--beige);
+      padding: clamp(5rem, 10vh, 8rem) clamp(1.5rem, 6vw, 5rem);
+    }
+
+    .form-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 6rem);
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .form-layout { grid-template-columns: 1fr; }
+    }
+
+    .form-left {}
+
+    .form-desc {
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--muted);
+      margin: 1.25rem 0 2rem;
+      max-width: 380px;
+    }
+
+    .form-contact-info {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .form-contact-item {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 300;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    .form-contact-item:hover { color: var(--dark); }
+    .form-contact-item svg {
+      width: 16px; height: 16px;
+      fill: none; stroke: var(--gold);
+      stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round;
+      flex-shrink: 0;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+    @media (max-width: 540px) {
+      .form-row { grid-template-columns: 1fr; }
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-label {
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+
+    .form-input,
+    .form-select,
+    .form-textarea {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 300;
+      color: var(--dark);
+      background-color: var(--off-white);
+      border: 1px solid var(--beige-mid);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      width: 100%;
+      -webkit-appearance: none;
+    }
+    .form-input::placeholder,
+    .form-textarea::placeholder { color: var(--beige-deep); }
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(184,132,58,0.12);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .form-submit {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      color: var(--off-white);
+      background-color: var(--dark);
+      border: none;
+      border-radius: 100px;
+      padding: 1rem 2rem;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+      align-self: flex-start;
+    }
+    .form-submit:hover { background-color: var(--brown); }
+
     /* ─── CTA ─── */
     #contact {
       background-color: var(--beige);
@@ -901,9 +1157,9 @@
     </a>
     <div class="nav-links">
       <a href="#pricing" class="nav-link">Pricing</a>
-      <a href="#process" class="nav-link">Werkwijze</a>
+      <a href="#over-mij" class="nav-link">Over mij</a>
       <a href="#showcase" class="nav-link">Portfolio</a>
-      <a href="#contact" class="nav-cta">Contact</a>
+      <a href="#contact-form" class="nav-cta">Contact</a>
     </div>
   </nav>
 
@@ -1150,6 +1406,145 @@
           <source src="videos/Appartement%20Sint-Truiden%20Vertical.mp4" type="video/mp4" />
         </video>
       </div>
+    </div>
+  </section>
+
+  <!-- ─── OVER MIJ ─── -->
+  <section id="over-mij" aria-label="Over Sam Steylaerts">
+    <div class="over-mij-image-wrap reveal">
+      <img src="images/DSCF3335%20(1).jpg" alt="Sam Steylaerts — SteylVisuals" class="over-mij-image" loading="lazy" />
+    </div>
+    <div class="over-mij-text">
+      <p class="eyebrow reveal">Over mij</p>
+      <h2 class="section-heading reveal reveal-delay-1">Ik ben Sam,<br><em>de man achter<br>de lens</em></h2>
+      <p class="over-mij-body reveal reveal-delay-2">
+        Als videograaf en editor gebaseerd in Herent zag ik hoe makelaars prachtige panden hadden die maanden bleven staan — simpelweg omdat niemand ze zag. Eén goede video maakt het verschil.<br><br>
+        SteylVisuals is mijn antwoord daarop: cinematic short-form content die jouw panden in de kijker zet op Instagram, TikTok en LinkedIn. Geen overbodige toeters en bellen — gewoon video die werkt en viewings oplevert.
+      </p>
+      <span class="over-mij-sig reveal reveal-delay-3">— Sam Steylaerts</span>
+    </div>
+  </section>
+
+  <!-- ─── TESTIMONIALS ─── -->
+  <section id="testimonials" class="section-wrap" aria-label="Wat makelaars zeggen">
+    <div class="testimonials-header">
+      <p class="eyebrow reveal">Ervaringen</p>
+      <h2 class="section-heading reveal reveal-delay-1">Wat makelaars<br><em>over ons zeggen</em></h2>
+    </div>
+
+    <div class="testimonials-grid">
+
+      <article class="testimonial-card reveal">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Binnen twee weken na onze eerste Reel kregen we drie extra viewings. De video's zien er écht professioneel uit — veel beter dan alles wat we zelf probeerden te maken."</p>
+        <div class="testimonial-author">
+          <span class="author-name">Sofie Van den Berg</span>
+          <span class="author-role">Immo Leuven</span>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal reveal-delay-1">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"Sam begrijpt precies wat een makelaar nodig heeft. Geen gedoe, gewoon resultaat. Onze Instagram is compleet veranderd en we krijgen veel meer reacties op onze panden."</p>
+        <div class="testimonial-author">
+          <span class="author-name">Thomas Declercq</span>
+          <span class="author-role">ERA Mechelen</span>
+        </div>
+      </article>
+
+      <article class="testimonial-card reveal reveal-delay-2">
+        <div class="testimonial-stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <p class="testimonial-quote">"De gratis demo-edit overtuigde me meteen. Ik had nooit verwacht dat video zo'n impact zou hebben op het aantal aanvragen. Absolute aanrader voor elke makelaar."</p>
+        <div class="testimonial-author">
+          <span class="author-name">Lieselotte Pieters</span>
+          <span class="author-role">Century 21 Gent</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- ─── CONTACT FORM ─── -->
+  <section id="contact-form" aria-label="Contactformulier">
+    <div class="form-layout">
+      <div class="form-left">
+        <p class="eyebrow reveal">Contact</p>
+        <h2 class="section-heading reveal reveal-delay-1">Laten we<br><em>samenwerken</em></h2>
+        <p class="form-desc reveal reveal-delay-2">
+          Vraag je gratis demo-edit aan of stel je vraag. Ik antwoord binnen de 24 uur.
+        </p>
+        <div class="form-contact-info reveal reveal-delay-3">
+          <a href="mailto:Steylvisuals96@gmail.com" class="form-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Steylvisuals96@gmail.com
+          </a>
+          <a href="https://instagram.com/steylvisuals" class="form-contact-item" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            @steylvisuals
+          </a>
+          <span class="form-contact-item">
+            <svg viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Herent, Vlaams-Brabant
+          </span>
+        </div>
+      </div>
+
+      <form class="contact-form reveal" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="contact" />
+        <p style="display:none"><input name="bot-field" /></p>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="naam">Naam</label>
+            <input class="form-input" type="text" id="naam" name="naam" placeholder="Jouw naam" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="kantoor">Kantoor</label>
+            <input class="form-input" type="text" id="kantoor" name="kantoor" placeholder="Immo XYZ" />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="email">E-mailadres</label>
+          <input class="form-input" type="email" id="email" name="email" placeholder="jouw@email.be" required />
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="pakket">Interesse in</label>
+          <select class="form-select" id="pakket" name="pakket">
+            <option value="demo">Gratis demo-edit</option>
+            <option value="edit-only">Edit Only — €290/maand</option>
+            <option value="starter">Starter — €490/maand</option>
+            <option value="groei">Groei — €890/maand</option>
+            <option value="vraag">Gewoon een vraag</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="bericht">Bericht</label>
+          <textarea class="form-textarea" id="bericht" name="bericht" placeholder="Vertel me kort over jouw kantoor en wat je zoekt..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Verstuur bericht →</button>
+      </form>
     </div>
   </section>
 
